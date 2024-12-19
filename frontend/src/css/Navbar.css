@@ -1,0 +1,56 @@
+/* Navbar.css */
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align all items vertically */
+    padding: 15px;
+    background-color: #f8a42f; /* Orange background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;  /* Make the navbar fixed at the top */
+    top: 0;  /* Ensure it is always at the top */
+    left: 0;
+    right: 0;
+    z-index: 1000;  /* Ensure the navbar stays on top of other content */
+}
+
+.navbar .logo {
+    font-size: 2.5rem; /* Bigger font size for logo */
+    font-weight: bold;
+    color: rgb(0, 0, 0); /* White text for contrast */
+}
+
+.navbar .nav-links a,
+.navbar .sign-up a {
+    text-decoration: none;
+    margin: 0 20px; /* Increased spacing between links */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold font */
+    font-size: 1.5rem; /* Increased font size */
+    line-height: 40px; /* Ensures the text is vertically centered */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .sign-up a:hover {
+    color: #333; /* Optional: Darker text on hover */
+}
+
+.navbar .sign-up {
+    display: flex;
+    align-items: center; /* Vertically align the text in the Sign Up button */
+    justify-content: center;
+    background-color: #f8a42f; /* Same color as the navbar */
+    padding: 10px 20px;
+    border-radius: 20px;
+    height: 40px; /* Make the Sign Up button height the same as the nav items */
+    cursor: pointer;
+}
+
+.navbar .sign-up a {
+    color: white;
+    font-size: 1.5rem; /* Same font size as navigation links */
+    text-decoration: none;
+    display: block;
+}

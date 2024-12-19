@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: center;
+    background: url("https://www.journeyera.com/wp-content/uploads/2022/07/mount-baloy-antique-panay-08462.jpg")
+      center/cover no-repeat;
+    height: 90vh; /* Full viewport height restored */
+    width: 100vw;
+    background-size: cover;
+    padding: 40px;
+  }
+  
+  .hero-content {
+    background-color: #f8a42f; /* Highlight background */
+    border-radius: 10px;
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    max-width: 60%; /* Increased container width */
+    text-align: center;
+    margin-left: 50px; /* Added left margin to the content container */
+  }
+  
+  .hero-title {
+    font-size: 60px; /* Larger font size for the title */
+    font-weight: bold;
+    margin-bottom: 30px; /* Increased space between title and description */
+    color: black;
+  }
+  
+  .highlight {
+    color: #0c0c0c;
+  }
+  
+  .hero-description {
+    font-size: 18px; /* Increased font size for the paragraph */
+    color: white;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Dark background for visibility */
+    padding: 20px 30px; /* Increased padding for better spacing */
+    border-radius: 5px;
+    max-width: 60%; /* Increased width for the paragraph */
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 50px; /* Increased space between buttons */
+    margin-top: 30px; /* Increased space above buttons */
+  }
+  
+  .visit-btn,
+  .sign-up-btn {
+    background-color: #f8a42f;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Larger button padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px; /* Larger font size for buttons */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .visit-btn:hover,
+  .sign-up-btn:hover {
+    transform: scale(1.05); /* Button hover effect */
+  }
+  

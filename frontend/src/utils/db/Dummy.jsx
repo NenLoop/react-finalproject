@@ -4,9 +4,9 @@ export const POSTS = [
 		text: "Im in love with Frank G. Cagadas Yall",
 		img: "/posts/post1.png",
 		user: {
-			username: "kurtieboi",
+			username: "norman",
 			profileImg: "/avatars/boy1.png",
-			fullName: "Kurt Frances",
+			fullName: "Norman Asakil",
 		},
 		comments: [
 			{

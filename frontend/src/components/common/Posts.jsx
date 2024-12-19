@@ -1,9 +1,26 @@
 import Post from "./Post";
 import PostSkeleton from "../skeleton/PostSkeleton";
-import { POSTS } from "../../utils/db/Dummy";
+import { useQuery } from "@tanstack/react-query";
 
 const Posts = () => {
-	const isLoading = false;
+
+	const {data: posts, isLoading} = useQuery({
+		queryKey: ["posts"],
+		queryFn: async () => {
+			try {
+				const res = await fetch("/api/posts/all");
+				const data = await res.json();
+
+				if(!res.ok) {
+					throw new Error(data.error ||  "Error in fetching posts");
+				}
+				return data;
+				
+			} catch (error) {
+				throw error;
+			}
+		}
+	});
 
 	return (
 		<>
@@ -14,10 +31,10 @@ const Posts = () => {
 					<PostSkeleton />
 				</div>
 			)}
-			{!isLoading && POSTS?.length === 0 && <p className='text-center my-4'>No posts in this tab. Switch 👻</p>}
-			{!isLoading && POSTS && (
+			{!isLoading && posts?.length === 0 && <p className='text-center my-4'>No posts in this tab. Switch 👻</p>}
+			{!isLoading && posts && (
 				<div>
-					{POSTS.map((post) => (
+					{posts.map((post) => (
 						<Post key={post._id} post={post} />
 					))}
 				</div>

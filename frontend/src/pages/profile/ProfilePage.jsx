@@ -28,7 +28,7 @@ const ProfilePage = () => {
 		fullName: "John Doe",
 		username: "johndoe",
 		profileImg: "/avatars/boy2.png",
-		coverImg: "/cover.png",
+		coverImg: "",
 		bio: "Lorem ipsum dolor sit amet as, consectetur adipiscing elit.",
 		link: "https://youtube.com/jasd",
 	};
@@ -66,7 +66,7 @@ const ProfilePage = () => {
 							{/* COVER IMG */}
 							<div className='relative group/cover'>
 								<img
-									src={coverImg || user?.coverImg || "/cover.png"}
+									src={coverImg || user?.coverImg || "../posts/cover.png"}
 									className='h-52 w-full object-cover'
 									alt='cover image'
 								/>
@@ -94,7 +94,7 @@ const ProfilePage = () => {
 								{/* USER AVATAR */}
 								<div className='avatar absolute -bottom-16 left-4'>
 									<div className='w-32 rounded-full relative group/avatar'>
-										<img src={profileImg || user?.profileImg || "/avatar-placeholder.png"} />
+										<img src={profileImg || user?.profileImg || "/posts/avatar-placeholder.png"} />
 										<div className='absolute top-5 right-3 p-1 bg-primary rounded-full group-hover/avatar:opacity-100 opacity-0 cursor-pointer'>
 											{isMyProfile && (
 												<MdEdit

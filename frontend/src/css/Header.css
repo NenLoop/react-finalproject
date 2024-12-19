@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between; /* Space between the logo on the left and navigation on the right */
+    align-items: center;
+    background-color: #f8a42f;
+    color: white;
+    padding: 20px 40px;
+  }
+  
+  .logo {
+    font-size: 36px; /* Increased font size for the logo */
+    font-weight: bold;
+  }
+  
+  .nav-container {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 40px; /* Increased space between navigation links */
+    list-style: none;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px; /* Increased font size for the navigation links */
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #333; /* Color change on hover */
+  }
+  
